@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+
+  background-image: url('./stronka.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.55); /* lekkie przyciemnienie */
+  backdrop-filter: blur(7px);     /* LEKKI blur */
+  -webkit-backdrop-filter: blur(7px);
+
+  z-index: -1;
+}
+
+/* Kontener */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  
+}
+
+/* Panel wyszukiwania */
+.search-panel {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-panel input {
+  padding: 10px 15px;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  outline: none;
+  background-color: #333; /* ciemny szary */
+  color: #fff;
+  width: 300px;
+  font-size: 16px;
+}
+
+.search-panel button {
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+  background-color: #009900;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.search-panel button:hover {
+  background-color: #006600;
+}
+
+/* Lista gier */
+.games-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Karta gry */
+.game-card {
+  background-color: #222; /* ciemny szary */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.game-card .game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.game-card .game-genres {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Ostatnie wyszukiwania i ulubione gry */
+.recent-list, .favorites-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.recent-list li, .favorites-list li {
+  padding: 5px 0;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.recent-list li:hover {
+  color: #fff;
+}
+.results-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-link {
+  color: #009900;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.result-link:hover {
+  color: #00cc00;
+  text-decoration: underline;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.recent-title {
+  text-align: center;
+  color: #009900;
+  margin-top: 40px;
+}
+
+.recent-searches {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.recent-tile {
+  background-color: #009900;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.recent-tile:hover {
+  background-color: #006600;
+  transform: scale(1.05);
+}
+/* ULUBIONE – PRZYCISK */
+.favorites-button {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.favorites-button:hover {
+  background: #43a047;
+}
+
+/* WYNIKI */
+.results {
+  margin-top: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.result-item {
+  margin-bottom: 12px;
+}
+
+.result-item a {
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.result-item a:hover {
+  text-decoration: underline;
+}
+
+/* ULUBIONE – WIDOK */
+.favorites-view {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.favorite-card {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px;
+  border-radius: 16px;
+}
+
+.favorite-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.favorite-card a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.favorite-card a:hover {
+  text-decoration: underline;
+}
